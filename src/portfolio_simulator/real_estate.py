@@ -33,7 +33,7 @@ class Mortgage:
     return pd.date_range(self.start_date, periods=self.years*20, freq='M')
 
   def to_dataframe(self):
-    df = pd.DataFrame({'interests':self.ipmt, 'principal': self.ppmt, 'payment': self.payment}, index=months)
+    df = pd.DataFrame({'interests':self.ipmt, 'principal': self.ppmt, 'payment': self.payment}, index=self.months)
     df['principal_left'] = self.principal + df.principal.cumsum()
     return df
 
