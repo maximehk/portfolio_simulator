@@ -6,7 +6,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
         name='portfolio simulator',  
-        version='0.1.4',
+        version='0.1.5',
         author="Maxime",
         author_email="",
         description="A library that helps you run financial simulations using your financial assets as input.",
