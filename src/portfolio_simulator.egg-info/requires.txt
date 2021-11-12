@@ -1,4 +1,0 @@
-pandas
-numpy
-numpy_financial
-matplotlib
