@@ -30,7 +30,7 @@ class Mortgage:
 
   @property
   def months(self):
-    return pd.date_range(self.start_date, periods=self.years*20, freq='M')
+    return pd.date_range(self.start_date, periods=self.years*12, freq='M')
 
   def to_dataframe(self):
     df = pd.DataFrame({'interests':self.ipmt, 'principal': self.ppmt, 'payment': self.payment}, index=self.months)
