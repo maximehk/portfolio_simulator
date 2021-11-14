@@ -47,25 +47,25 @@ class Mortgage:
     months: int
 
     @property
-    def years(self):
+    def years(self) -> int:
         return self.months / 12
 
     @property
-    def periods(self):
+    def periods(self) -> np.array:
         return np.arange(self.months) + 1
 
     @property
-    def ipmt(self):
+    def ipmt(self) -> np.array:
         """Computes the interest portion of a payment."""
         return -npf.ipmt(self.rate / 12, self.periods, self.months, self.principal)
 
     @property
-    def ppmt(self):
+    def ppmt(self) -> np.array:
         """Computes the payment against loan principal."""
         return -npf.ppmt(self.rate / 12, self.periods, self.months, self.principal)
 
     @property
-    def payment(self):
+    def payment(self) -> np.array:
         """Computes the monthly payments."""
         return self.ipmt + self.ppmt
 
@@ -79,6 +79,8 @@ class Mortgage:
         s = s.add(self.to_dataframe().principal, fill_value=0)
         return s.reindex()
 
+    def cashflows(self):
+        return -self.to_dataframe().payment
 
     def to_dataframe(self):
         df = pd.DataFrame(
