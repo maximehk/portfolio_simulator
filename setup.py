@@ -20,7 +20,6 @@ setuptools.setup(
             'pandas',
             'numpy',
             'numpy_financial',
-            'matplotlib',
             ],
         classifiers=[
             "Programming Language :: Python :: 3",

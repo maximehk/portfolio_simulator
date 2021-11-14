@@ -2,3 +2,4 @@ __pycache__
 build
 dist
 src/portfolio_simulator.egg-info/*
+src/main.py
