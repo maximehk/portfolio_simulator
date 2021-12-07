@@ -1,3 +1,0 @@
-from portfolio_simulator.portfolio import Portfolio
-from portfolio_simulator.real_estate import Asset
-from portfolio_simulator.real_estate import Mortgage

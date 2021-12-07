@@ -13,13 +13,11 @@ setuptools.setup(
         long_description=long_description,
         long_description_content_type="text/markdown",
         url="https://github.com/maximehk/portfolio_simulator",
-        package_dir={"": "src"},
-        packages=setuptools.find_packages(where="src"),
+        package_dir={"": "portfolio_simulator"},
+        packages=setuptools.find_packages(where="portfolio_simulator"),
         python_requires=">=3.6",
         install_requires=[
             'pandas',
-            'numpy',
-            'numpy_financial',
             ],
         classifiers=[
             "Programming Language :: Python :: 3",
