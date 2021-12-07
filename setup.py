@@ -6,15 +6,14 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
         name='portfolio simulator',  
-        version='0.1.6',
+        version='0.1.8',
         author="Maxime",
         author_email="",
         description="A library that helps you run financial simulations using your financial assets as input.",
         long_description=long_description,
         long_description_content_type="text/markdown",
         url="https://github.com/maximehk/portfolio_simulator",
-        package_dir={"": "portfolio_simulator"},
-        packages=setuptools.find_packages(where="portfolio_simulator"),
+        packages=setuptools.find_packages(),
         python_requires=">=3.6",
         install_requires=[
             'pandas',

@@ -2,5 +2,5 @@ __pycache__
 .vscod
 build
 dist
-src/portfolio_simulator.egg-info/*
-src/main.py
+portfolio_simulator/portfolio_simulator.egg-info
+portfolio_simulator.egg-info
